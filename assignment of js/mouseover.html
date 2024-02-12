@@ -1,0 +1,32 @@
+<!-- 6. Write a javascript program to hide the div on mouseover. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover</title>
+    <style>
+        /* Style the div */
+        #myDiv {
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Div to be hidden on mouseover -->
+<div id="myDiv" onmouseover="hideDiv()">Using Mouseover this div to hide it.</div>
+
+<script>
+    // Function to hide the div
+    function hideDiv() {
+        var div = document.getElementById('myDiv');
+        div.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

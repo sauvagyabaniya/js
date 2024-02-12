@@ -1,0 +1,36 @@
+<!-- 5. write a program calculate interest using function -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+</head>
+<body>
+    <h1>Simple Interest Calculator</h1>
+
+    <script>
+        // Function to calculate simple interest
+        function csi(principal, rate, time) {
+            var interest = (principal * rate * time) / 100;
+            return interest;
+        }
+
+        // Example usage of the function
+        var principal = 1000; // Principal amount
+        var rate = 5; // Interest rate (in percentage)
+        var time = 2; // Time (in years)
+
+        // Calculate the interest
+        var interest = csi(principal, rate, time);
+
+        // Display the result
+        document.write("<p>Principal Amount: " + principal + "</p>");
+        document.write("<p>Interest Rate: " + rate + "%</p>");
+        document.write("<p>Time: " + time + " years</p>");
+        document.write("<p>Simple Interest: " + interest + "</p>");
+    </script>
+
+</body>
+</html>

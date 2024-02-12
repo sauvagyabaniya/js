@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie in javascript</title>
+<script type="text/javascript">
+    // this is cookie which we have to  insepct - application and cookie 
+    document.cookie="username=Yoongi Min; expires=Sun,"+
+    +"18 dec 2023 12:00:00 UTC; path=/";
+
+    // to store multiple value
+    document.cookie="firstname=Yoongi;lastname=Min"; 
+    var cookieList= document.cookie;
+
+    // to expire cookie we have to write this code:
+    // document.cookie="username=Yoongi Min; expires=Sun,10 dec 2023 12:00:00 UTC; path=/";
+
+    // this code will show without inspect
+    var cook= document.cookie;
+    document.write(cook);
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

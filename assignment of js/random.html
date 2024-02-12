@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <button onclick="generateRandomNumber()">Click To Generate Random Number</button>
+    <p id="output"></p>
+
+    <script>
+        function generateRandomNumber() {
+            // Define the range of random numbers (inclusive)
+            var min = 1;
+            var max = 100;
+
+            // Generate a random number within the range
+            var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            // Display the random number
+            document.getElementById("output").textContent = "Random Number: " + randomNumber;
+        }
+    </script>
+</body>
+</html>

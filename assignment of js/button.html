@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Value</title>
+</head>
+<body>
+    <p>Value: <span id="display">0</span></p>
+    <button id="incrementButton">Increment</button>
+
+    <script>
+        var value = 0;
+        document.getElementById("incrementButton").addEventListener("click", function() {
+        document.getElementById("display").textContent = ++value;
+        });
+    </script>
+</body>
+</html>

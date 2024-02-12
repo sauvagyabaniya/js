@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Case</title>
+</head>
+<body>
+    <label for="textInput">Enter letter:</label>
+    <br>
+    <input type="text" id="textInput">
+    <button onclick="changeCase()">Change Case</button>
+    <p id="output"></p>
+
+    <script>
+        function changeCase() {
+            var inputText = document.getElementById("textInput").value;
+            var outputText = inputText.replace(/[a-zA-Z]/g, function(char) {
+                return char === char.toUpperCase() ? char.toLowerCase() : char.toUpperCase();
+            });
+            document.getElementById("output").textContent = outputText;
+        }
+    </script>
+</body>
+</html>
