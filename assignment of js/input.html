@@ -1,0 +1,16 @@
+<!-- What are the Event Handlers in JavaScript? write code for different types of event. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Event </title>
+    <script>
+        function handleInput() {
+            var input = document.getElementById("inputField");
+            console.log("Input value changed to: " + input.value);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="inputField" oninput="handleInput()">
+</body>
+</html>
