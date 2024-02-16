@@ -1,0 +1,53 @@
+<!--5. Write a program to display name of the day using number -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name of the Day</title>
+    <script>
+        function getNameOfDay() {
+            // Get the number input by the user
+            var dayNumber = document.getElementById("dayNumber").value;
+            
+            // Array containing names of the days
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            
+            // Validate the input
+            if (dayNumber >= 1 && dayNumber <= 7) {
+                // Display the name of the day corresponding to the input number
+                var nameOfDay = days[dayNumber - 1];
+                document.getElementById("output").innerHTML = "Name of the day is " + nameOfDay;
+            } else {
+                // Display an error message if the input is invalid
+                document.getElementById("output").innerHTML = "Invalid input. Please enter a number between 1 and 7.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Display Name of the Day</h2>
+    
+    <label for="dayNumber">Number of Day of a Week</label>
+    <br><br>
+    <input type="number" id="dayNumber" min="1" max="7">
+    <button onclick="getNameOfDay()">Check</button>
+    <style>
+        button{
+           background-color: aqua;
+           height:50px ;
+           width: 80px;
+           border-radius: 10px;
+        }
+        input{
+            height:40px ;
+            width: 90px;
+        }
+        #output {
+            color: rgb(62, 227, 62);
+        }
+    </style>
+    
+    <div id="output"></div>
+</body>
+</html>

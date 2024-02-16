@@ -1,35 +1,32 @@
+<!-- Validate a contact form using client-side script. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email validation</title>
+    <title>Validation</title>
 </head>
-<script>
-    function validateEmail(){
-        var inputText=document.getElementById("email").value;
-        var mailformat= /^\w+([\.-]?\w+)@\w([\.-]?\w+)*(\.\w{2,3})+$/;
-        if(inputText.match(mailformat)){
+<body>
+    <form>
+        Email: <input type="text" name="email" id="email"/><br><br>
+        Password: <input type="password" name="password" id="password"/><br><br>
+        <input type="button" value="login" onclick="ValidateEmail()"/>
+    </form>
+    <script type="text/javascript">
+
+        function ValidateEmail(){
+            var inputText = document.getElementById("email").value;
+            var mailformat= /^\w+([\.-]?\w+)@\w([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(inputText.match(mailformat))
+            {
            alert("Valid email address!");
            return true;
-        }
+           }
     else{
         alert("You have enter an invalid email address!");
         return false;
     }   
-}
-</script>
-<body>
-    <form>
-        <form onsubmit="return display()">
-            <input type="text" name="email" id="email">
-            <br>
-            <!-- <input type="submit" value="email"> -->
-            <input type="password" name="password" id="password" >
-            <br>
-            <input type="button" value="login" onclick="validateEmail()"> 
-            <!-- function ma j name rakhyo onclick ma ne tae rakhnu paraxa -->
-        </form>
-    </form>
+}  
+    </script>
 </body>
-</html>                           
+</html>
