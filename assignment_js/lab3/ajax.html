@@ -1,0 +1,47 @@
+<!-- write a program to perform GET and POST requests of Ajax in jQuery. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax GET and POST </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#getButton").click(function(){
+                $.get("get.php", function(response)
+                {
+                    $("#getOutput").html(response);
+                });
+            });
+
+            $("#postButton").click(function(){
+                var data = $("#postForm").serialize();
+                $.post("post.php", data, function(response){
+                    $("#postOutput").html(response);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Perform Ajax GET and POST Requests</h2>
+    
+    <button id="getButton">GET Request</button>
+    <div id="getOutput"></div>
+    
+    <br><br>
+    
+    <form id="postForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <br><br>
+        <button id="postButton">POST Request</button>
+    </form>
+    <div id="postOutput"></div>
+</body>
+</html>

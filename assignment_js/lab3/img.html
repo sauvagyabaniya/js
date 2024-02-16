@@ -1,0 +1,32 @@
+<!-- 10.write a program to hide and show image using jQuery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show and Hide Image</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Hide the image when the page loads
+            $("#image").hide();
+            
+            // Show the image when the button is clicked
+            $("#showButton").click(function(){
+                $("#image").show();
+            });
+            
+            // Hide the image when the button is clicked
+            $("#hideButton").click(function(){
+                $("#image").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="showButton">Show Image</button>
+    <button id="hideButton">Hide Image</button>
+    <br><br>
+    <img id="image" src="hello.jpg" alt="hello image">
+</body>
+</html>
