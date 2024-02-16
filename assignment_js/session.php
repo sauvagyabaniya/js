@@ -10,7 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if username is set in session
     if (isset($_SESSION['username'])) {
         echo "<p>Hello, " . $_SESSION['username'] . "!</p>";
-        echo "<p><a href='logout.php'>Logout</a></p>"; // Provide a link to logout
+        echo "<p><a href='logout.php'>Logout</a></p>"; 
     } else {
     ?>
     <form method="post">
