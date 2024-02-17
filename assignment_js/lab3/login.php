@@ -1,4 +1,4 @@
-<!-- Write a program for implementing login with username andnpassword and redirect to welcome page if validated otherwise prints an error. -->
+<!--11. Write a program for implementing login with username andnpassword and redirect to welcome page if validated otherwise prints an error. -->
 <?php
 session_start();
 
@@ -44,3 +44,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </body>
 </html>
+<!--then write welcome. php -->

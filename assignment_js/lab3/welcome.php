@@ -1,4 +1,4 @@
-<!-- Write a program for implementing login with username and password and redirect to welcome page if validated otherwise prints 
+<!-- 11.Write a program for implementing login with username and password and redirect to welcome page if validated otherwise prints 
 an error. -->
 <?php
 session_start();

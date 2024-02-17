@@ -1,5 +1,4 @@
-<!-- 12.Create a form to collect student details such as name, address, 
-phone,age, gender and store into the database.  -->
+<!-- 12.Create a form to collect student details such as name, address, phone,age, gender and store into the database.  -->
 <?php
 // Database connection
 $servername = "localhost";

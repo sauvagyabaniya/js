@@ -1,4 +1,4 @@
-<!-- write a php program to demonstrate how to access static members of a class. -->
+<!--9. write a php program to demonstrate how to access static members of a class. -->
 <?php
 class MathUtil {
     // Static property
