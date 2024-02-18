@@ -1,17 +1,19 @@
 <!-- 11.Write a program for implementing login with username and password and redirect to welcome page if validated otherwise prints 
 an error. -->
 <?php
+// Start session to access username
 session_start();
 
 // Check if user is logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit;
+if (!isset($_SESSION["username"])) {
+    // If not logged in, redirect to login page
+    header("Location: index.php");
+    exit();
 }
 
-$username = $_SESSION['username'];
+// Display welcome message
+$username = $_SESSION["username"];
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +23,7 @@ $username = $_SESSION['username'];
 </head>
 <body>
     <h2>Welcome, <?php echo $username; ?>!</h2>
-    <p>This is the welcome page. You are logged in.</p>
+    <p>You have successfully logged in.</p>
     <a href="logout.php">Logout</a>
 </body>
 </html>
