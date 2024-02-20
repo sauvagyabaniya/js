@@ -6,7 +6,8 @@ session_start();
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate username and password (for demonstration purposes, just hardcoded values)
-    $validUsername = "Sabby";
+    $validUsername = "Sabby"; 
+    // You can change sabby as your name ane type your name and pw as password to get output
     $validPassword = "password";
 
     $username = $_POST["username"];
