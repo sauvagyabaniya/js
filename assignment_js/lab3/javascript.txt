@@ -1,0 +1,4 @@
+JavaScript is a high-level, interpreted programming language 
+primarily used for creating interactive and dynamic content on web pages. 
+Developed by Netscape in the mid-1990s,
+It has  become one of the most widely used languages for front-end web development.

@@ -11,7 +11,7 @@
     
     <?php
     // Specify the file path
-    $file_path = "js.txt";
+    $file_path = "javascript.txt";
     
     // Check if the file exists
     if (file_exists($file_path)) {
