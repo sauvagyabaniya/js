@@ -1,0 +1,33 @@
+// <!-- 2. Write a program using Javascript array and for each loop -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Array and forEach Loop</title>
+</head>
+<body>
+
+    <h1>Numbers List</h1>
+
+    <!-- Output will be displayed here -->
+    <div id="output"></div>
+
+    <script>
+        // Define an array of numbers
+        const numbers = [1, 2, 3, 4, 5];
+
+        // Variable to store the output
+        let output = "";
+
+        // Use forEach loop to iterate over each number in the array and append them to the output
+        numbers.forEach(function(number, index) {
+            output += "Number at index " + index + ": " + number + "<br>";
+        });
+
+        // Display the output in the 'output' div
+        document.getElementById("output").innerHTML = output;
+    </script>
+
+</body>
+</html>
+
+
