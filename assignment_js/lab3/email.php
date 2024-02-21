@@ -1,7 +1,7 @@
 <!-- 15.Write a program to send email from php page -->
 <?php
 // Set the recipient email address
-$to = "rainbow19@gmail.com";
+$to = "baniyasauvagya03@gmail.com";
 
 // Set the subject of the email
 $subject = "Test Email";
@@ -10,7 +10,7 @@ $subject = "Test Email";
 $message = "This is a test email sent from PHP.";
 
 // Set additional headers
-$headers = "From: sauvagya@gmail.com\r\n";
+$headers = "From: sauvagyabaniya@gmail.com\r\n";
 $headers .= "Reply-To: leoxfy22@gmail.com\r\n";
 $headers .= "Content-Type: text/html\r\n";
 
