@@ -2,32 +2,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form Validation</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
 </head>
 <body>
-    <form>
-        <h3>Contact Form</h3>
-        Email: <input type="text" name="email" id="email"/><br><br>
-        Password: <input type="password" name="password" id="password"/><br><br>
-        <input type="button" value="login" onclick="ValidateEmail()"/>
-    </form>
-    <script type="text/javascript">
 
-        function ValidateEmail(){
-            var inputText = document.getElementById("email").value;
-            var mailformat= /^\w+([\.-]?\w+)@\w([\.-]?\w+)*(\.\w{2,3})+$/;
-            if(inputText.match(mailformat))
-            {
-           alert("Valid email address!");
-           return true;
-           }
-    else{
-        alert("You have entered invalid email address!");
-        return false;
-    }   
-}  
-    </script>
+<h2>Contact Form</h2>
+<form id="contactForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <span id="nameError" class="error"></span><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email"><br>
+    <span id="emailError" class="error"></span><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message"></textarea><br>
+    <span id="messageError" class="error"></span><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const nameError = form.querySelector('#nameError');
+        const emailError = form.querySelector('#emailError');
+        const messageError = form.querySelector('#messageError');
+        nameError.textContent = !form.name.value.trim() ? 'Name is required' : '';
+        emailError.textContent = !form.email.value.trim() ? 'Email is required' : !isValidEmail(form.email.value.trim()) ? 'Invalid email format' : '';
+        messageError.textContent = !form.message.value.trim() ? 'Message is required' : '';
+        if (!nameError.textContent && !emailError.textContent && !messageError.textContent) {
+            alert('Form submitted successfully!');
+            form.reset();
+        }
+    });
+
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+</script>
+
 </body>
 </html>
